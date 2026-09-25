@@ -8,23 +8,11 @@ This lab simulates a small monitored network: an isolated attacker machine, a mo
 
 ## Architecture
 
-                VMware Fusion (Apple Silicon / ARM64)
-                          |
-          Private lab network: 10.10.10.0/24
-                          |
-    +---------------------+---------------------+
-    |                                            |
-Kali Linux (attacker) Ubuntu Server (target/victim)
-10.10.10.15 10.10.10.10
-| |
-| Wazuh Agent installed
-| reports to manager
-| |
-+----------------------> Wazuh Manager <-----+
-10.10.10.20
-(Ubuntu Server 26.04 LTS,
-native install manager,
-indexer, and dashboard)
+Three VMs on an isolated private lab network (10.10.10.0/24):
+
+- Kali Linux (attacker) - 10.10.10.15
+- Ubuntu Server (target) - 10.10.10.10 - runs the Wazuh Agent, reports to the manager
+- Wazuh Manager - 10.10.10.20 - Ubuntu Server 26.04 LTS, native install of manager, indexer, and dashboard
 
 Each VM sits on an isolated private network, with a separate NAT interface for internet access. No lab traffic touches the home network.
 
