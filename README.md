@@ -1,5 +1,3 @@
-# home-soc-lab
-A home SOC lab built with Wazuh, Kali, and Ubuntu — detection engineering practice.
 # Home SOC Lab
 
 A self-built Security Operations Center lab for hands-on detection engineering practice, running entirely on a MacBook Air (Apple Silicon) using VMware Fusion.
